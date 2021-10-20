@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
 }
 
 img {
@@ -13,11 +13,16 @@ img {
 }
 
 a {
-    color: #EC407A;
+    color: #ec407a;
+    display: inline-block;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100px;
 }
 
 a:hover {
-    color: #E91E63;
+    color: #e91e63;
 }
 
 button {
@@ -29,11 +34,11 @@ button {
 }
 
 button:disabled {
-    background-color: #CFD8DC;
+    background-color: #cfd8dc;
 }
 
 button:disabled:hover {
-    background-color: #CFD8DC;
+    background-color: #cfd8dc;
 }
 
 main {
@@ -51,15 +56,15 @@ main {
 
 /* Action style */
 .action {
-    background-color: #66BB6A;
-    font-size: 16px;
+    background-color: #66bb6a;
+    font-size: 24px;
     padding: 10px 20px;
     border-radius: 6px;
     margin: 10px 0;
 }
 
 .action:hover {
-    background-color: #4CAF50;
+    background-color: #4caf50;
 }
 
 /* Images style */
@@ -70,32 +75,52 @@ main {
     column-count: 4;
     column-gap: 5px;
     min-height: 400px;
-}
-
-a {
-    display: inline-block;
     border-radius: 6px;
-    overflow: hidden;
-    width: 100%;
-    min-height: 100px;
 }
 
 a:nth-child(n) {
-    background-color: #EFEBE9;
+    background-color: #efebe9;
 }
 
 a:nth-child(2n) {
-    background-color: #D7CCC8;
+    background-color: #d7ccc8;
 }
 
 a:nth-child(3n) {
-    background-color: #BCAAA4;
+    background-color: #bcaaa4;
 }
 
 /* Popup style */
+.popup {
+    position: fixed;
+    visibility: hidden;
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(33, 33, 33, 0.5);
+    z-index: 2;
+}
+
+.popup.open {
+    visibility: visible;
+}
+
 .popup .content {
     text-align: right;
     column-count: initial;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.popup .link {
+    display: inline;
 }
 
 figure {
@@ -111,50 +136,4 @@ figure img {
 figcaption {
     color: #424242;
     margin: 5px 0;
-}
-
-.content {
-    border-radius: 6px;
-}
-
-.popup {
-    position: fixed;
-    visibility: hidden;
-    display: flex;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(33, 33, 33, 0.5);
-    z-index: -1;
-}
-
-.popup.open {
-    visibility: visible;
-}
-
-.action {
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    background-color: transparent;
-    line-height: 0;
-    font-size: 50px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
-.popup .content {
-    width: 100%;
-    margin: auto;
-    box-sizing: border-box;
-    max-width: 600px;
-    background-color: #fff;
-    border-radius: 6px;
-    padding: 20px;
-}
-
-.popup .link {
-    display: inline;
 }
